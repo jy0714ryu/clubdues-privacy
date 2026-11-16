@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy · 개인정보처리방침</title>
+  <style>
+    body { font-family: -apple-system, "Apple SD Gothic Neo", "Hiragino Sans", "PingFang TC", "Malgun Gothic", "Segoe UI", sans-serif;
+           max-width: 760px; margin: 0 auto; padding: 24px 16px; line-height: 1.7;
+           color: #1c1c1e; background: #f7f7f5; }
+    nav { font-size: 15px; padding: 8px 0 16px; border-bottom: 1px solid #ddd; }
+    section { padding-top: 16px; border-bottom: 1px solid #ddd; padding-bottom: 24px; }
+    h1 { color: #141619; font-size: 24px; border-bottom: 4px solid #2f6f5e; padding-bottom: 8px; }
+    h2 { font-size: 18px; margin-top: 28px; color: #2a3038; }
+    ul { padding-left: 20px; }
+    li { margin: 8px 0; }
+    .tbl { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: 14px; background: #fff; }
+    th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; vertical-align: top; }
+    th { background: #eef2f0; }
+    code { font-size: 12px; word-break: break-all; }
+    .updated { color: #666; font-size: 14px; }
+    .top { text-align: right; }
+    a { color: #1f5c4d; }
+  </style>
+</head>
+<body id="top">
+  <nav><a href="#ko" hreflang="ko">한국어</a> · <a href="#ja" hreflang="ja">日本語</a> · <a href="#en" hreflang="en">English</a> · <a href="#zh-Hant" hreflang="zh-Hant">繁體中文</a> · <a href="#vi" hreflang="vi">Tiếng Việt</a></nav>
+<section id="ko" lang="ko">
+<h1>개인정보처리방침</h1>
+<p class="updated">시행일: 2026-11-01</p>
+<p>이 앱은 모임 총무가 회비 장부를 쓰는 앱입니다. 회원가입·로그인이 없고, 장부는 <strong>총무의 휴대폰 안에</strong> 저장됩니다.
+총무가 <strong>링크 공유를 켠 모임만</strong> 회원이 볼 수 있도록 공개용 사본을 우리 서버에 올립니다.</p>
+<p>운영자: <strong>골목공작소</strong>(개인사업자, 이 앱의 개발자) · <a href="mailto:golmok.support@gmail.com">golmok.support@gmail.com</a>. 이 방침에서 "우리"는 골목공작소를 말합니다.</p>
+
+<h2>1. 휴대폰 안에만 저장되는 것</h2>
+<ul>
+<li>모임·회원·회비 규칙·납부 기록·장부(수입/지출)·행사·회원 메모·영수증 사진·계좌 문구·앱 설정.</li>
+<li>회원 메모, 영수증 사진, 계좌 문구, 총무 정보, 기기 정보는 링크를 켜도 서버에 올라가지 않습니다.</li>
+<li>연락처·문자·위치·사진(갤러리) 접근 권한은 요청하지 않습니다. 앱에 있는 권한은 인터넷과, 광고·결제 SDK 가 쓰는 시스템 권한(광고 ID·결제·네트워크 상태 등)뿐입니다. 영수증 사진은 시스템 사진 선택기로 고른 한 장만 앱이 받습니다.</li>
+<li>CSV·결산 카드를 메신저 등으로 보낼 때는 총무가 고른 앱으로 직접 보내며, 우리 서버를 거치지 않습니다.</li>
+</ul>
+
+<h2>2. 링크 공유를 켤 때만 서버로 가는 것</h2>
+<p>링크를 켜면 앱이 아래 항목만 담은 공개용 사본을 암호화된 연결(HTTPS)로 올립니다. 이 표는 앱이 실제로 보내는 필드 목록과 자동 검사로 맞춰 둡니다.
+<strong>링크를 받은 사람은 누구나 이 내용을 볼 수 있습니다.</strong> "금액 숨기기"는 회원별 금액만 숨기며, 장부 합계·잔액·행사 비용은 그대로 올라갑니다.</p>
+<div class="tbl"><table class="fields">
+<thead><tr><th>필드(전송 키)</th><th>내용</th></tr></thead>
+<tbody>
+<tr data-field="snapshot"><td><code>snapshot</code></td><td>공개용 사본 전체(아래 항목을 담는 묶음)</td></tr>
+<tr data-field="snapshot.v"><td><code>snapshot.v</code></td><td>형식 버전 번호</td></tr>
+<tr data-field="snapshot.lang"><td><code>snapshot.lang</code></td><td>페이지 언어</td></tr>
+<tr data-field="snapshot.app_name"><td><code>snapshot.app_name</code></td><td>앱 이름(페이지 맨 아래 줄)</td></tr>
+<tr data-field="snapshot.group"><td><code>snapshot.group</code></td><td>모임 이름</td></tr>
+<tr data-field="snapshot.updated_at"><td><code>snapshot.updated_at</code></td><td>갱신 시각</td></tr>
+<tr data-field="snapshot.expires_at"><td><code>snapshot.expires_at</code></td><td>링크 만료일(정한 경우만)</td></tr>
+<tr data-field="snapshot.hide_amounts"><td><code>snapshot.hide_amounts</code></td><td>금액 숨기기 사용 여부</td></tr>
+<tr data-field="snapshot.as_of"><td><code>snapshot.as_of</code></td><td>기준 시점 표시</td></tr>
+<tr data-field="snapshot.columns"><td><code>snapshot.columns</code></td><td>회차 이름 목록(월·비정기 걷기 제목)</td></tr>
+<tr data-field="snapshot.members"><td><code>snapshot.members</code></td><td>회원 행 목록</td></tr>
+<tr data-field="snapshot.members.name"><td><code>snapshot.members.name</code></td><td>회원 표시 이름(이름 가리기를 켜면 가린 뒤의 값)</td></tr>
+<tr data-field="snapshot.members.cells"><td><code>snapshot.members.cells</code></td><td>회차별 칸 목록</td></tr>
+<tr data-field="snapshot.members.cells.s"><td><code>snapshot.members.cells.s</code></td><td>칸 상태(납부·일부 납부·미납·면제·해당 없음·기한 전)</td></tr>
+<tr data-field="snapshot.members.cells.a"><td><code>snapshot.members.cells.a</code></td><td>그 칸에 낸 금액(금액 숨기기를 켜면 보내지 않음)</td></tr>
+<tr data-field="snapshot.members.owed"><td><code>snapshot.members.owed</code></td><td>회원별 미납 금액(금액 숨기기를 켜면 비움)</td></tr>
+<tr data-field="snapshot.summary"><td><code>snapshot.summary</code></td><td>요약 묶음</td></tr>
+<tr data-field="snapshot.summary.balance"><td><code>snapshot.summary.balance</code></td><td>잔액</td></tr>
+<tr data-field="snapshot.summary.paid_rate"><td><code>snapshot.summary.paid_rate</code></td><td>납부율</td></tr>
+<tr data-field="snapshot.summary.unpaid_count"><td><code>snapshot.summary.unpaid_count</code></td><td>미납 회원 수</td></tr>
+<tr data-field="snapshot.summary.unpaid_total"><td><code>snapshot.summary.unpaid_total</code></td><td>미납 합계(금액 숨기기를 켜면 비움)</td></tr>
+<tr data-field="snapshot.summary.period"><td><code>snapshot.summary.period</code></td><td>집계 기간 이름</td></tr>
+<tr data-field="snapshot.summary.income"><td><code>snapshot.summary.income</code></td><td>수입 합계</td></tr>
+<tr data-field="snapshot.summary.dues"><td><code>snapshot.summary.dues</code></td><td>회비 합계</td></tr>
+<tr data-field="snapshot.summary.event_collected"><td><code>snapshot.summary.event_collected</code></td><td>행사로 걷은 돈 합계</td></tr>
+<tr data-field="snapshot.summary.expense"><td><code>snapshot.summary.expense</code></td><td>지출 합계</td></tr>
+<tr data-field="snapshot.summary.categories"><td><code>snapshot.summary.categories</code></td><td>카테고리별 합계 목록</td></tr>
+<tr data-field="snapshot.summary.categories.kind"><td><code>snapshot.summary.categories.kind</code></td><td>수입/지출 구분</td></tr>
+<tr data-field="snapshot.summary.categories.label"><td><code>snapshot.summary.categories.label</code></td><td>카테고리 이름</td></tr>
+<tr data-field="snapshot.summary.categories.amount"><td><code>snapshot.summary.categories.amount</code></td><td>카테고리 합계 금액</td></tr>
+<tr data-field="snapshot.events"><td><code>snapshot.events</code></td><td>행사 정산 요약 목록(최대 20개)</td></tr>
+<tr data-field="snapshot.events.title"><td><code>snapshot.events.title</code></td><td>행사 이름</td></tr>
+<tr data-field="snapshot.events.date"><td><code>snapshot.events.date</code></td><td>행사 날짜</td></tr>
+<tr data-field="snapshot.events.cost"><td><code>snapshot.events.cost</code></td><td>행사 비용</td></tr>
+<tr data-field="snapshot.events.attendees"><td><code>snapshot.events.attendees</code></td><td>참석 인원 수</td></tr>
+<tr data-field="snapshot.events.paid"><td><code>snapshot.events.paid</code></td><td>낸 사람 수</td></tr>
+<tr data-field="member_tokens"><td><code>member_tokens</code></td><td>회원별 링크 목록(사본과 따로 보냄)</td></tr>
+<tr data-field="member_tokens.row"><td><code>member_tokens.row</code></td><td>회원 행 번호</td></tr>
+<tr data-field="member_tokens.token"><td><code>member_tokens.token</code></td><td>회원 개인 링크용 무작위 값</td></tr>
+</tbody></table></div>
+<p>그 밖에 서버에는 링크를 운영하는 데 필요한 값만 둡니다: 무작위로 만든 모임 번호·링크 주소, 편집 키의 <strong>해시값</strong>(편집 키 원문은 저장하지 않음), 사본의 내용 해시, 만든·갱신·마지막 확인 시각, 인계 코드의 해시값과 그 만료 시각.</p>
+
+<h2>3. 보관과 삭제</h2>
+<ul>
+<li><strong>링크를 끄면 즉시 삭제</strong>됩니다. 서버 사본과 회원별 링크가 바로 지워지고, Cloudflare 캐시 삭제도 함께 요청합니다.</li>
+<li>총무가 정한 <strong>만료일이 지나면</strong> 삭제됩니다.</li>
+<li>앱에서 <strong>180일 동안 갱신이 없으면</strong> 자동으로 삭제됩니다.</li>
+<li>링크를 만들고 사본을 한 번도 올리지 못한 모임 기록은 7일 뒤 삭제됩니다.</li>
+<li><strong>인계 코드</strong>는 24시간 동안만 쓸 수 있고, 쓰지 않으면 그 뒤 삭제됩니다. 이미 사용한 코드의 해시값은 새 휴대폰이 응답을 놓쳐 다시 시도할 때를 위해 최대 30일 보관한 뒤 삭제합니다(그 전에 링크를 끄면 모임과 함께 바로 삭제).</li>
+<li>서버 데이터베이스는 매일 백업하며 백업 파일은 7일 뒤 지웁니다. 그래서 지운 사본도 최대 7일 동안은 외부에 공개되지 않는 서버 백업에 남을 수 있습니다.</li>
+<li>지운 데이터는 데이터베이스 파일의 빈 공간까지 덮어써서 지웁니다.</li>
+</ul>
+
+<h2>4. IP 주소와 Cloudflare</h2>
+<ul>
+<li>서버 앞단은 Cloudflare(콘텐츠 전송·터널 서비스)가 맡습니다. 앱과 회원의 브라우저가 서버에 연결할 때 Cloudflare가 IP 주소를 처리합니다. Cloudflare의 처리는 <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 개인정보처리방침</a>을 따릅니다.</li>
+<li>우리 서버는 IP 주소를 저장하지 않고 접속 로그에도 남기지 않습니다. 앱이 서버에 보내는 요청(업로드·삭제·인계 등)에는 남용을 막기 위해 IP별 횟수 제한(분당 10회)을 두는데, 이때 IP 주소는 서버 메모리에만 두며 1분이 지나면 더 쓰지 않고 다음 정리 때 지워집니다. 디스크나 로그에는 쓰지 않습니다.</li>
+<li>회원이 보는 페이지는 Cloudflare에 60초 동안 캐시됩니다. 서버에 장애가 나면 마지막으로 캐시된 화면이 최대 7일까지 보일 수 있습니다.</li>
+<li>페이지는 검색 엔진에 노출되지 않게 설정했고, 스크립트·쿠키를 쓰지 않습니다.</li>
+</ul>
+
+<h2>5. 총무의 역할</h2>
+<ul>
+<li>회원 정보를 어떤 목적으로 올릴지 정하는 사람은 총무입니다. 총무가 개인정보 처리의 주체이고, 우리는 총무의 요청에 따라 사본을 보관·표시하는 수탁자 성격의 서비스입니다.</li>
+<li>총무는 링크를 켜기 전에 회원들에게 링크로 장부를 공유한다는 사실을 알리고 동의를 받아야 합니다. 앱의 공유 켜기 화면에도 같은 안내가 있습니다.</li>
+<li>이름이 걱정되면 "이름 가리기"를, 금액이 걱정되면 "금액 숨기기"를 켜 주세요.</li>
+</ul>
+
+<h2>6. 백업 파일과 편집 키</h2>
+<ul>
+<li>앱이 만드는 백업 파일에는 장부 전체와 함께 <strong>공유 링크를 고치거나 끌 수 있는 편집 키</strong>가 들어 있습니다. 백업 파일을 남에게 주지 마세요. 파일을 가진 사람은 링크 내용을 바꾸거나 끌 수 있습니다.</li>
+<li>백업 파일은 총무가 고른 폴더나 공유 대상에만 저장·전달됩니다. 휴대폰의 Google 백업이 켜져 있으면 Android가 앱 데이터(편집 키 포함)를 총무 본인의 Google 계정에 백업할 수 있습니다. 우리는 이 백업에 접근할 수 없습니다.</li>
+<li>인계 파일에는 편집 키가 들어 있지 않습니다. 대신 24시간짜리 인계 코드를 따로 알려 주는 방식입니다.</li>
+</ul>
+
+<h2>7. 광고</h2>
+<ul>
+<li>앱은 Google AdMob 광고를 보여 줍니다. 광고 과정에서 Google은 대략적인 위치, 비정상 종료 로그, 진단 정보, 앱 사용 기록(상호작용), 기기 식별자(광고 ID)를 수집·처리할 수 있습니다. 자세한 내용은 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 참고하세요.</li>
+<li>유럽경제지역(EEA)·영국·스위스에서는 Google UMP로 광고 동의를 묻고, 설정의 <strong>광고 개인정보 선택</strong>에서 언제든 바꿀 수 있습니다.</li>
+<li>회원이 보는 웹 페이지에는 광고가 없습니다.</li>
+</ul>
+
+<h2>8. 결제</h2>
+<ul><li>광고 제거 평생권과 구독 결제는 Google Play가 처리합니다. 우리는 카드번호 등 결제 정보를 받지 않습니다. 앱은 구매 여부만 Google Play에서 확인합니다.</li></ul>
+
+<h2>9. 문의 메일</h2>
+<ul><li>설정의 문의를 누르면 휴대폰의 메일 앱이 열립니다. 메일은 직접 보낼 때만 전송되고, 받은 메일은 답변에만 씁니다.</li></ul>
+
+<h2>10. 아동</h2>
+<p>이 앱은 만 18세 이상 성인을 대상으로 하며, 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+
+<h2>11. 개인정보의 국외 이전</h2>
+<p>서비스 제공을 위해 아래와 같이 개인정보가 국외에서 처리됩니다. 이전은 앱이나 브라우저가 해당 서비스에 접속할 때 네트워크를 통해 이루어집니다.</p>
+<div class="tbl"><table>
+<thead><tr><th>받는 자(국가)</th><th>항목</th><th>목적</th><th>보관 기간</th></tr></thead>
+<tbody class="xfer">
+<tr><td>Cloudflare, Inc.(미국, 전 세계 데이터센터)</td><td>IP 주소, 요청 정보, 공개용 사본 페이지(전송 경유·캐시)</td><td>콘텐츠 전송, 서버 연결(터널), 보안</td><td>페이지 캐시 60초(서버 장애 시 최대 7일), 그 밖은 Cloudflare 정책</td></tr>
+<tr><td>Google LLC(미국) — AdMob</td><td>광고 ID, 대략적인 위치, 비정상 종료 로그, 진단 정보, 앱 상호작용</td><td>광고 제공, 분석, 사기 방지</td><td>Google 정책</td></tr>
+<tr><td>Google LLC(미국) — Google Play</td><td>구매 여부(결제 정보는 Google Play가 직접 받음)</td><td>광고 제거·구독 결제와 구매 확인</td><td>Google 정책</td></tr>
+</tbody></table></div>
+<p>링크 공유를 켜지 않으면 장부 내용은 Cloudflare를 거쳐 올라가지 않습니다. 광고 개인정보는 설정의 광고 개인정보 선택이나 휴대폰 설정(광고 ID 삭제·재설정)에서 조정할 수 있습니다.</p>
+
+<h2>12. 개인정보 보호책임자</h2>
+<ul><li>골목공작소(대표) · <a href="mailto:golmok.support@gmail.com">golmok.support@gmail.com</a></li></ul>
+
+<h2>13. 삭제 요청과 문의</h2>
+<ul>
+<li>가장 빠른 방법은 앱에서 <strong>링크를 끄는 것</strong>입니다. 서버 사본이 바로 지워집니다.</li>
+<li>회원이 자기 정보 삭제를 원하면 총무에게 요청하거나, 링크 주소를 적어 아래 메일로 보내 주세요. 확인 뒤 서버 사본을 지웁니다.</li>
+<li>이메일: <a href="mailto:golmok.support@gmail.com">golmok.support@gmail.com</a></li>
+</ul>
+<p class="updated">시행일: 2026-11-01</p>
+<p class="top"><a href="#top">↑</a></p>
+</section>
+<section id="ja" lang="ja">
+<h1>プライバシーポリシー</h1>
+<p class="updated">施行日：2026-11-01</p>
+<p>このアプリは、グループの会計担当が会費の帳簿をつけるためのアプリです。会員登録やログインはなく、帳簿は<strong>会計担当のスマートフォンの中</strong>に保存されます。
+会計担当が<strong>リンク共有をオンにしたグループだけ</strong>、メンバーが見られるように公開用コピーを運営者のサーバーにアップロードします。</p>
+<p>運営者：<strong>골목공작소（Golmok Gongjakso）</strong>（個人事業者・本アプリの開発者）・<a href="mailto:golmok.support@gmail.com">golmok.support@gmail.com</a>。このポリシーの「運営者」は本アプリの運営者である골목공작소を指します。</p>
+
+<h2>1. スマートフォンの中だけに保存されるもの</h2>
+<ul>
+<li>グループ・メンバー・会費のルール・納付の記録・帳簿（収入／支出）・イベント・メンバーのメモ・領収書の写真・口座の案内文・アプリの設定。</li>
+<li>メンバーのメモ、領収書の写真、口座の案内文、会計担当の情報、端末の情報は、リンクをオンにしてもサーバーに送りません。</li>
+<li>連絡先・SMS・位置情報・写真（ギャラリー）へのアクセス権限は求めません。アプリにある権限は、インターネットと、広告・決済 SDK が使うシステム権限（広告 ID・決済・ネットワーク状態など）だけです。領収書の写真は、システムの写真選択画面で選んだ1枚だけをアプリが受け取ります。</li>
+<li>CSV や決算カードをメッセンジャーなどで送るときは、会計担当が選んだアプリから直接送られ、運営者のサーバーは経由しません。</li>
+</ul>
+
+<h2>2. リンク共有をオンにしたときだけサーバーに送るもの</h2>
+<p>リンクをオンにすると、アプリは次の項目だけを含む公開用コピーを暗号化された通信（HTTPS）で送ります。この表は、アプリが実際に送るフィールドの一覧と自動テストで一致させています。
+<strong>リンクを受け取った人は誰でもこの内容を見られます。</strong>「金額を隠す」はメンバーごとの金額だけを隠し、帳簿の合計・残高・イベントの費用はそのまま送ります。</p>
+<div class="tbl"><table class="fields">
+<thead><tr><th>フィールド（送信キー）</th><th>内容</th></tr></thead>
+<tbody>
+<tr data-field="snapshot"><td><code>snapshot</code></td><td>公開用コピー全体（以下の項目のまとまり）</td></tr>
+<tr data-field="snapshot.v"><td><code>snapshot.v</code></td><td>形式のバージョン番号</td></tr>
+<tr data-field="snapshot.lang"><td><code>snapshot.lang</code></td><td>ページの言語</td></tr>
+<tr data-field="snapshot.app_name"><td><code>snapshot.app_name</code></td><td>アプリ名（ページ最下部）</td></tr>
+<tr data-field="snapshot.group"><td><code>snapshot.group</code></td><td>グループ名</td></tr>
+<tr data-field="snapshot.updated_at"><td><code>snapshot.updated_at</code></td><td>更新日時</td></tr>
+<tr data-field="snapshot.expires_at"><td><code>snapshot.expires_at</code></td><td>リンクの有効期限（設定した場合のみ）</td></tr>
+<tr data-field="snapshot.hide_amounts"><td><code>snapshot.hide_amounts</code></td><td>金額を隠す設定の有無</td></tr>
+<tr data-field="snapshot.as_of"><td><code>snapshot.as_of</code></td><td>基準時点の表示</td></tr>
+<tr data-field="snapshot.columns"><td><code>snapshot.columns</code></td><td>回の名前の一覧（月・臨時の集金の名前）</td></tr>
+<tr data-field="snapshot.members"><td><code>snapshot.members</code></td><td>メンバーの行の一覧</td></tr>
+<tr data-field="snapshot.members.name"><td><code>snapshot.members.name</code></td><td>メンバーの表示名（名前を伏せる設定なら伏せた後の値）</td></tr>
+<tr data-field="snapshot.members.cells"><td><code>snapshot.members.cells</code></td><td>回ごとのマスの一覧</td></tr>
+<tr data-field="snapshot.members.cells.s"><td><code>snapshot.members.cells.s</code></td><td>マスの状態（納付・一部納付・未納・免除・対象外・期限前）</td></tr>
+<tr data-field="snapshot.members.cells.a"><td><code>snapshot.members.cells.a</code></td><td>そのマスの納付額（金額を隠す設定なら送りません）</td></tr>
+<tr data-field="snapshot.members.owed"><td><code>snapshot.members.owed</code></td><td>メンバーごとの未納額（金額を隠す設定なら空）</td></tr>
+<tr data-field="snapshot.summary"><td><code>snapshot.summary</code></td><td>まとめ</td></tr>
+<tr data-field="snapshot.summary.balance"><td><code>snapshot.summary.balance</code></td><td>残高</td></tr>
+<tr data-field="snapshot.summary.paid_rate"><td><code>snapshot.summary.paid_rate</code></td><td>納付率</td></tr>
+<tr data-field="snapshot.summary.unpaid_count"><td><code>snapshot.summary.unpaid_count</code></td><td>未納のメンバー数</td></tr>
+<tr data-field="snapshot.summary.unpaid_total"><td><code>snapshot.summary.unpaid_total</code></td><td>未納の合計（金額を隠す設定なら空）</td></tr>
+<tr data-field="snapshot.summary.period"><td><code>snapshot.summary.period</code></td><td>集計期間の名前</td></tr>
+<tr data-field="snapshot.summary.income"><td><code>snapshot.summary.income</code></td><td>収入の合計</td></tr>
+<tr data-field="snapshot.summary.dues"><td><code>snapshot.summary.dues</code></td><td>会費の合計</td></tr>
+<tr data-field="snapshot.summary.event_collected"><td><code>snapshot.summary.event_collected</code></td><td>イベントで集めたお金の合計</td></tr>
+<tr data-field="snapshot.summary.expense"><td><code>snapshot.summary.expense</code></td><td>支出の合計</td></tr>
+<tr data-field="snapshot.summary.categories"><td><code>snapshot.summary.categories</code></td><td>カテゴリ別合計の一覧</td></tr>
+<tr data-field="snapshot.summary.categories.kind"><td><code>snapshot.summary.categories.kind</code></td><td>収入・支出の区分</td></tr>
+<tr data-field="snapshot.summary.categories.label"><td><code>snapshot.summary.categories.label</code></td><td>カテゴリ名</td></tr>
+<tr data-field="snapshot.summary.categories.amount"><td><code>snapshot.summary.categories.amount</code></td><td>カテゴリの合計額</td></tr>
+<tr data-field="snapshot.events"><td><code>snapshot.events</code></td><td>イベント精算のまとめ一覧（最大20件）</td></tr>
+<tr data-field="snapshot.events.title"><td><code>snapshot.events.title</code></td><td>イベント名</td></tr>
+<tr data-field="snapshot.events.date"><td><code>snapshot.events.date</code></td><td>イベントの日付</td></tr>
+<tr data-field="snapshot.events.cost"><td><code>snapshot.events.cost</code></td><td>イベントの費用</td></tr>
+<tr data-field="snapshot.events.attendees"><td><code>snapshot.events.attendees</code></td><td>参加人数</td></tr>
+<tr data-field="snapshot.events.paid"><td><code>snapshot.events.paid</code></td><td>納付した人数</td></tr>
+<tr data-field="member_tokens"><td><code>member_tokens</code></td><td>メンバー別リンクの一覧（コピーとは別に送信）</td></tr>
+<tr data-field="member_tokens.row"><td><code>member_tokens.row</code></td><td>メンバーの行番号</td></tr>
+<tr data-field="member_tokens.token"><td><code>member_tokens.token</code></td><td>メンバー個人リンク用のランダムな値</td></tr>
+</tbody></table></div>
+<p>このほかサーバーには、リンクの運用に必要な値だけを保存します：ランダムに作ったグループ番号とリンクのアドレス、編集キーの<strong>ハッシュ値</strong>（編集キーそのものは保存しません）、コピーの内容ハッシュ、作成・更新・最終確認の日時、引き継ぎコードのハッシュ値とその有効期限。</p>
+
+<h2>3. 保存期間と削除</h2>
+<ul>
+<li><strong>リンクをオフにするとすぐに削除</strong>します。サーバーのコピーとメンバー別リンクがすぐに消え、Cloudflare のキャッシュ削除もあわせて依頼します。</li>
+<li>会計担当が決めた<strong>有効期限を過ぎると</strong>削除します。</li>
+<li>アプリから<strong>180日間更新がないと</strong>自動で削除します。</li>
+<li>リンクを作ったもののコピーを一度もアップロードできなかったグループの記録は、7日後に削除します。</li>
+<li><strong>引き継ぎコード</strong>は24時間だけ使えます。使われなかったコードはその後削除します。使用済みのコードのハッシュ値は、新しい端末が応答を受け取れず再試行する場合に備えて最大30日間保存してから削除します（その前にリンクをオフにすると、グループと一緒にすぐ削除します）。</li>
+<li>サーバーのデータベースは毎日バックアップし、バックアップファイルは7日後に削除します。そのため、削除したコピーも最大7日間は非公開のサーバーバックアップに残ることがあります。</li>
+<li>削除したデータは、データベースファイルの空き領域まで上書きして消します。</li>
+</ul>
+
+<h2>4. IP アドレスと Cloudflare</h2>
+<ul>
+<li>サーバーの手前は Cloudflare（コンテンツ配信・トンネルサービス）が担当しています。アプリやメンバーのブラウザがサーバーに接続するとき、Cloudflare が IP アドレスを処理します。Cloudflare による処理は <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare のプライバシーポリシー</a>に従います。</li>
+<li>運営者のサーバーは IP アドレスを保存せず、アクセスログにも残しません。アプリがサーバーに送るリクエスト（アップロード・削除・引き継ぎなど）には、不正利用を防ぐため IP ごとの回数制限（1分あたり10回）を設けています。このとき IP アドレスはサーバーのメモリ上にだけ置き、1分たつと使わなくなり、次の整理のときに消去されます。ディスクやログには書き込みません。</li>
+<li>メンバーが見るページは Cloudflare に60秒間キャッシュされます。サーバーに障害が起きた場合、最後にキャッシュされた画面が最大7日間表示されることがあります。</li>
+<li>ページは検索エンジンに表示されないよう設定しており、スクリプトや Cookie は使いません。</li>
+</ul>
+
+<h2>5. 会計担当の役割</h2>
+<ul>
+<li>メンバーの情報を何のために公開するかを決めるのは会計担当です。会計担当が個人情報の取り扱いの主体であり、運営者は会計担当の指示に従ってコピーを保管・表示する受託者のような立場のサービスです。</li>
+<li>会計担当は、リンクをオンにする前に、リンクで帳簿を共有することをメンバーに知らせ、同意を得てください。アプリのリンク共有をオンにする画面にも同じ案内があります。</li>
+<li>名前が気になる場合は「名前を伏せる」、金額が気になる場合は「金額を隠す」をオンにしてください。</li>
+</ul>
+
+<h2>6. バックアップファイルと編集キー</h2>
+<ul>
+<li>アプリが作るバックアップファイルには、帳簿全体とともに<strong>共有リンクを変更・オフにできる編集キー</strong>が入っています。バックアップファイルは他の人に渡さないでください。ファイルを持っている人は、リンクの内容を変えたりオフにしたりできます。</li>
+<li>バックアップファイルは、会計担当が選んだフォルダや共有先にだけ保存・送信されます。スマートフォンの Google バックアップがオンの場合、Android がアプリのデータ（編集キーを含む）を会計担当ご本人の Google アカウントにバックアップすることがあります。運営者はこのバックアップにアクセスできません。</li>
+<li>引き継ぎファイルには編集キーは入っていません。代わりに24時間有効の引き継ぎコードを別の方法で伝えます。</li>
+</ul>
+
+<h2>7. 広告</h2>
+<ul>
+<li>アプリには Google AdMob の広告が表示されます。広告の配信にあたり、Google はおおよその位置情報、クラッシュログ、診断情報、アプリ内の操作、端末の識別子（広告 ID）を収集・処理することがあります。詳しくは <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>をご覧ください。</li>
+<li>欧州経済領域（EEA）・英国・スイスでは Google UMP で広告への同意を確認します。設定の<strong>広告のプライバシー設定</strong>からいつでも変更できます。</li>
+<li>メンバーが見るウェブページには広告はありません。</li>
+</ul>
+
+<h2>8. お支払い</h2>
+<ul><li>広告削除（買い切り）と定期購入のお支払いは Google Play が処理します。運営者はカード番号などの決済情報を受け取りません。アプリは購入の有無だけを Google Play で確認します。</li></ul>
+
+<h2>9. お問い合わせメール</h2>
+<ul><li>設定のお問い合わせを押すと、スマートフォンのメールアプリが開きます。メールはご自身で送信したときだけ送られ、受け取ったメールは返信にのみ使います。</li></ul>
+
+<h2>10. お子さま</h2>
+<p>このアプリは18歳以上の方を対象としており、お子さまの個人情報を意図的に収集することはありません。</p>
+
+<h2>11. 削除のご依頼とお問い合わせ</h2>
+<ul>
+<li>いちばん早い方法は、アプリで<strong>リンクをオフにする</strong>ことです。サーバーのコピーがすぐに削除されます。</li>
+<li>メンバーがご自身の情報の削除を希望する場合は、会計担当に依頼するか、リンクのアドレスを書いて下記のメールにお送りください。確認のうえサーバーのコピーを削除します。</li>
+<li>メール：<a href="mailto:golmok.support@gmail.com">golmok.support@gmail.com</a></li>
+</ul>
+<p class="updated">施行日：2026-11-01</p>
+<p class="top"><a href="#top">↑</a></p>
+</section>
+<section id="en" lang="en">
+<h1>Privacy Policy</h1>
+<p class="updated">Effective date: 2026-11-01</p>
+<p>This app helps a group's treasurer keep a dues ledger. There is no sign-up or login, and the ledger is stored <strong>on the treasurer's phone</strong>.
+Only for groups where the treasurer <strong>turns on the share link</strong> does the app upload a public copy to our server so members can view it.</p>
+<p>Operator: <strong>Golmok Gongjakso (골목공작소)</strong>, a sole proprietor and the developer of this app · <a href="mailto:golmok.support@gmail.com">golmok.support@gmail.com</a>. In this policy, "we" means Golmok Gongjakso.</p>
+
+<h2>1. What stays on the phone only</h2>
+<ul>
+<li>Groups, members, dues rules, payment records, the ledger (income and expenses), events, member notes, receipt photos, the account note, and app settings.</li>
+<li>Member notes, receipt photos, the account note, information about the treasurer, and device information are never uploaded, even with the link on.</li>
+<li>The app does not ask for access to contacts, text messages, location, or your photo gallery. Its only permissions are internet access and the system permissions used by the ad and billing SDKs (advertising ID, billing, network state, and similar). For receipts, the app receives only the single photo you pick in the system photo picker.</li>
+<li>When you send a CSV or a statement card through a messenger or another app, it goes directly from the app you choose. It does not pass through our server.</li>
+</ul>
+
+<h2>2. What goes to our server, only when the share link is on</h2>
+<p>When the link is on, the app uploads a public copy containing only the items below, over an encrypted connection (HTTPS). An automated test keeps this table in line with the fields the app actually sends.
+<strong>Anyone who has the link can see this content.</strong> "Hide amounts" hides per-member amounts only. Ledger totals, the balance, and event costs are still uploaded.</p>
+<div class="tbl"><table class="fields">
+<thead><tr><th>Field (key sent)</th><th>What it is</th></tr></thead>
+<tbody>
+<tr data-field="snapshot"><td><code>snapshot</code></td><td>The public copy as a whole (holds the items below)</td></tr>
+<tr data-field="snapshot.v"><td><code>snapshot.v</code></td><td>Format version number</td></tr>
+<tr data-field="snapshot.lang"><td><code>snapshot.lang</code></td><td>Page language</td></tr>
+<tr data-field="snapshot.app_name"><td><code>snapshot.app_name</code></td><td>App name (bottom line of the page)</td></tr>
+<tr data-field="snapshot.group"><td><code>snapshot.group</code></td><td>Group name</td></tr>
+<tr data-field="snapshot.updated_at"><td><code>snapshot.updated_at</code></td><td>Last updated time</td></tr>
+<tr data-field="snapshot.expires_at"><td><code>snapshot.expires_at</code></td><td>Link expiry date (only if set)</td></tr>
+<tr data-field="snapshot.hide_amounts"><td><code>snapshot.hide_amounts</code></td><td>Whether &quot;hide amounts&quot; is on</td></tr>
+<tr data-field="snapshot.as_of"><td><code>snapshot.as_of</code></td><td>&quot;As of&quot; label</td></tr>
+<tr data-field="snapshot.columns"><td><code>snapshot.columns</code></td><td>List of collection names (months, extra collections)</td></tr>
+<tr data-field="snapshot.members"><td><code>snapshot.members</code></td><td>List of member rows</td></tr>
+<tr data-field="snapshot.members.name"><td><code>snapshot.members.name</code></td><td>Member display name (after masking if &quot;hide names&quot; is on)</td></tr>
+<tr data-field="snapshot.members.cells"><td><code>snapshot.members.cells</code></td><td>List of cells, one per collection</td></tr>
+<tr data-field="snapshot.members.cells.s"><td><code>snapshot.members.cells.s</code></td><td>Cell status (paid, partial, unpaid, exempt, not applicable, not yet due)</td></tr>
+<tr data-field="snapshot.members.cells.a"><td><code>snapshot.members.cells.a</code></td><td>Amount paid for that cell (not sent when &quot;hide amounts&quot; is on)</td></tr>
+<tr data-field="snapshot.members.owed"><td><code>snapshot.members.owed</code></td><td>Amount each member still owes (empty when &quot;hide amounts&quot; is on)</td></tr>
+<tr data-field="snapshot.summary"><td><code>snapshot.summary</code></td><td>Summary block</td></tr>
+<tr data-field="snapshot.summary.balance"><td><code>snapshot.summary.balance</code></td><td>Balance</td></tr>
+<tr data-field="snapshot.summary.paid_rate"><td><code>snapshot.summary.paid_rate</code></td><td>Payment rate</td></tr>
+<tr data-field="snapshot.summary.unpaid_count"><td><code>snapshot.summary.unpaid_count</code></td><td>Number of members with unpaid dues</td></tr>
+<tr data-field="snapshot.summary.unpaid_total"><td><code>snapshot.summary.unpaid_total</code></td><td>Total unpaid (empty when &quot;hide amounts&quot; is on)</td></tr>
+<tr data-field="snapshot.summary.period"><td><code>snapshot.summary.period</code></td><td>Name of the reporting period</td></tr>
+<tr data-field="snapshot.summary.income"><td><code>snapshot.summary.income</code></td><td>Total income</td></tr>
+<tr data-field="snapshot.summary.dues"><td><code>snapshot.summary.dues</code></td><td>Total dues</td></tr>
+<tr data-field="snapshot.summary.event_collected"><td><code>snapshot.summary.event_collected</code></td><td>Total collected for events</td></tr>
+<tr data-field="snapshot.summary.expense"><td><code>snapshot.summary.expense</code></td><td>Total expenses</td></tr>
+<tr data-field="snapshot.summary.categories"><td><code>snapshot.summary.categories</code></td><td>List of totals by category</td></tr>
+<tr data-field="snapshot.summary.categories.kind"><td><code>snapshot.summary.categories.kind</code></td><td>Income or expense</td></tr>
+<tr data-field="snapshot.summary.categories.label"><td><code>snapshot.summary.categories.label</code></td><td>Category name</td></tr>
+<tr data-field="snapshot.summary.categories.amount"><td><code>snapshot.summary.categories.amount</code></td><td>Category total</td></tr>
+<tr data-field="snapshot.events"><td><code>snapshot.events</code></td><td>List of event summaries (up to 20)</td></tr>
+<tr data-field="snapshot.events.title"><td><code>snapshot.events.title</code></td><td>Event name</td></tr>
+<tr data-field="snapshot.events.date"><td><code>snapshot.events.date</code></td><td>Event date</td></tr>
+<tr data-field="snapshot.events.cost"><td><code>snapshot.events.cost</code></td><td>Event cost</td></tr>
+<tr data-field="snapshot.events.attendees"><td><code>snapshot.events.attendees</code></td><td>Number of attendees</td></tr>
+<tr data-field="snapshot.events.paid"><td><code>snapshot.events.paid</code></td><td>Number of people who paid</td></tr>
+<tr data-field="member_tokens"><td><code>member_tokens</code></td><td>List of per-member links (sent separately from the copy)</td></tr>
+<tr data-field="member_tokens.row"><td><code>member_tokens.row</code></td><td>Member row number</td></tr>
+<tr data-field="member_tokens.token"><td><code>member_tokens.token</code></td><td>Random value for a member&#x27;s personal link</td></tr>
+</tbody></table></div>
+<p>Besides that, the server keeps only what it needs to run the link: a random group ID and link address, a <strong>hash</strong> of the edit key (never the edit key itself), a hash of the copy's content, created/updated/last-checked times, and the hash of a handover code with its expiry time.</p>
+
+<h2>3. How long we keep it and when it is deleted</h2>
+<ul>
+<li><strong>Turning the link off deletes it right away.</strong> The server copy and the per-member links are removed immediately, and we also ask Cloudflare to clear its cache.</li>
+<li>It is deleted when the <strong>expiry date</strong> the treasurer set has passed.</li>
+<li>It is deleted automatically if the app <strong>hasn't updated it for 180 days</strong>.</li>
+<li>If a link was created but no copy was ever uploaded, that record is deleted after 7 days.</li>
+<li>A <strong>handover code</strong> works for 24 hours and is deleted after that if unused. The hash of a used code is kept for up to 30 days, so a new phone that missed the server's reply can safely retry, and is then deleted. (If the link is turned off before then, it is deleted right away along with the group.)</li>
+<li>The server database is backed up daily, and backup files are deleted after 7 days. So a deleted copy can remain in a private server backup for up to 7 days.</li>
+<li>Deleted data is overwritten, including free space in the database file.</li>
+</ul>
+
+<h2>4. IP addresses and Cloudflare</h2>
+<ul>
+<li>Cloudflare (a content delivery and tunnel service) sits in front of our server. When the app or a member's browser connects, Cloudflare processes the IP address. Cloudflare's processing follows the <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>.</li>
+<li>Our server does not store IP addresses and does not write them to access logs. To prevent abuse, requests the app sends to our server (uploads, deletes, handovers, and so on) are limited per IP address (10 per minute). For this, the IP address is held only in server memory. After 1 minute it is no longer used, and it is cleared at the next cleanup. It is never written to disk or logs.</li>
+<li>Pages that members view are cached by Cloudflare for 60 seconds. If our server is down, the last cached page may be shown for up to 7 days.</li>
+<li>Pages are set to stay out of search engines and use no scripts or cookies.</li>
+</ul>
+
+<h2>5. The treasurer's role</h2>
+<ul>
+<li>The treasurer decides whether and why to share members' information. The treasurer is the controller of that data, and we act as a processor-like service that stores and displays the copy on the treasurer's instruction.</li>
+<li>Before turning the link on, the treasurer should tell members that the ledger will be shared by link and get their consent. The app shows the same notice on the screen where you turn sharing on.</li>
+<li>If names are a concern, turn on "Hide names." If amounts are a concern, turn on "Hide amounts."</li>
+</ul>
+
+<h2>6. Backup files and the edit key</h2>
+<ul>
+<li>A backup file made by the app contains the whole ledger plus the <strong>edit key that can change or turn off the share link</strong>. Don't give your backup file to anyone. Whoever has it can change or turn off the link.</li>
+<li>Backup files are saved or sent only to the folder or app the treasurer picks. If Google backup is on for the phone, Android may back up app data (including the edit key) to the treasurer's own Google account. We cannot access that backup.</li>
+<li>A handover file does not contain the edit key. Instead, a 24-hour handover code is shared separately.</li>
+</ul>
+
+<h2>7. Ads</h2>
+<ul>
+<li>The app shows Google AdMob ads. To serve ads, Google may collect and process approximate location, crash logs, diagnostics, in-app interactions, and a device identifier (advertising ID). See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> for details.</li>
+<li>In the EEA, the UK, and Switzerland, the app asks for ad consent through Google UMP. You can change your choice anytime under <strong>Ad privacy choices</strong> in Settings.</li>
+<li>The web pages members view have no ads.</li>
+</ul>
+
+<h2>8. Purchases</h2>
+<ul><li>Payments for Remove ads and subscriptions are handled by Google Play. We never receive card numbers or other payment details. The app only checks with Google Play whether you have made a purchase.</li></ul>
+
+<h2>9. Contact email</h2>
+<ul><li>Tapping Contact in Settings opens your mail app. An email is sent only if you send it yourself, and we use it only to reply.</li></ul>
+
+<h2>10. Children</h2>
+<p>This app is meant for adults 18 and over and does not knowingly collect children's personal information.</p>
+
+<h2>11. Deletion requests and contact</h2>
+<ul>
+<li>The fastest way is to <strong>turn off the link</strong> in the app. The server copy is deleted right away.</li>
+<li>If a member wants their information deleted, they can ask the treasurer, or email us with the link address. We will check and delete the server copy.</li>
+<li>Email: <a href="mailto:golmok.support@gmail.com">golmok.support@gmail.com</a></li>
+</ul>
+<p class="updated">Effective date: 2026-11-01</p>
+<p class="top"><a href="#top">↑</a></p>
+</section>
+<section id="zh-Hant" lang="zh-Hant">
+<h1>隱私權政策</h1>
+<p class="updated">生效日期：2026-11-01</p>
+<p>這個 App 是讓社團總務記錄會費帳本的工具。不需要註冊或登入，帳本儲存在<strong>總務的手機裡</strong>。
+只有總務<strong>開啟分享連結的社團</strong>，App 才會把公開副本上傳到我們的伺服器，讓成員可以查看。</p>
+<p>營運者：<strong>골목공작소（Golmok Gongjakso）</strong>（個人經營者、本 App 的開發者）・<a href="mailto:golmok.support@gmail.com">golmok.support@gmail.com</a>。本政策中的「我們」指的是골목공작소。</p>
+
+<h2>1. 只儲存在手機裡的資料</h2>
+<ul>
+<li>社團、成員、會費規則、繳費紀錄、帳本（收入／支出）、活動、成員備註、收據照片、帳戶資訊、App 設定。</li>
+<li>成員備註、收據照片、帳戶資訊、總務本人的資料、裝置資訊，即使開啟連結也不會上傳。</li>
+<li>App 不會要求聯絡人、簡訊、位置或相簿（圖庫）的存取權限。App 的權限只有網路，以及廣告、付款 SDK 使用的系統權限（廣告 ID、付款、網路狀態等）。收據照片只會收到您在系統相片挑選器中選取的那一張。</li>
+<li>用通訊軟體等傳送 CSV 或結算卡片時，會由總務選擇的 App 直接傳送，不經過我們的伺服器。</li>
+</ul>
+
+<h2>2. 只在開啟分享連結時傳到伺服器的資料</h2>
+<p>開啟連結後，App 會透過加密連線（HTTPS）上傳只包含下列項目的公開副本。這張表會用自動測試與 App 實際傳送的欄位保持一致。
+<strong>拿到連結的人都能看到這些內容。</strong>「隱藏金額」只會隱藏各成員的金額，帳本合計、餘額和活動費用仍會上傳。</p>
+<div class="tbl"><table class="fields">
+<thead><tr><th>欄位（傳送鍵名）</th><th>內容</th></tr></thead>
+<tbody>
+<tr data-field="snapshot"><td><code>snapshot</code></td><td>公開副本整體（包含以下項目）</td></tr>
+<tr data-field="snapshot.v"><td><code>snapshot.v</code></td><td>格式版本號</td></tr>
+<tr data-field="snapshot.lang"><td><code>snapshot.lang</code></td><td>頁面語言</td></tr>
+<tr data-field="snapshot.app_name"><td><code>snapshot.app_name</code></td><td>App 名稱（頁面最下方）</td></tr>
+<tr data-field="snapshot.group"><td><code>snapshot.group</code></td><td>社團名稱</td></tr>
+<tr data-field="snapshot.updated_at"><td><code>snapshot.updated_at</code></td><td>更新時間</td></tr>
+<tr data-field="snapshot.expires_at"><td><code>snapshot.expires_at</code></td><td>連結到期日（有設定時）</td></tr>
+<tr data-field="snapshot.hide_amounts"><td><code>snapshot.hide_amounts</code></td><td>是否開啟隱藏金額</td></tr>
+<tr data-field="snapshot.as_of"><td><code>snapshot.as_of</code></td><td>基準時間標示</td></tr>
+<tr data-field="snapshot.columns"><td><code>snapshot.columns</code></td><td>各期名稱清單（月份・臨時收款名稱）</td></tr>
+<tr data-field="snapshot.members"><td><code>snapshot.members</code></td><td>成員列清單</td></tr>
+<tr data-field="snapshot.members.name"><td><code>snapshot.members.name</code></td><td>成員顯示名稱（開啟隱藏姓名時為遮蔽後的值）</td></tr>
+<tr data-field="snapshot.members.cells"><td><code>snapshot.members.cells</code></td><td>各期格子清單</td></tr>
+<tr data-field="snapshot.members.cells.s"><td><code>snapshot.members.cells.s</code></td><td>格子狀態（已繳・部分繳・未繳・免繳・不適用・未到期）</td></tr>
+<tr data-field="snapshot.members.cells.a"><td><code>snapshot.members.cells.a</code></td><td>該格繳費金額（開啟隱藏金額時不傳送）</td></tr>
+<tr data-field="snapshot.members.owed"><td><code>snapshot.members.owed</code></td><td>各成員未繳金額（開啟隱藏金額時為空）</td></tr>
+<tr data-field="snapshot.summary"><td><code>snapshot.summary</code></td><td>摘要</td></tr>
+<tr data-field="snapshot.summary.balance"><td><code>snapshot.summary.balance</code></td><td>餘額</td></tr>
+<tr data-field="snapshot.summary.paid_rate"><td><code>snapshot.summary.paid_rate</code></td><td>繳費率</td></tr>
+<tr data-field="snapshot.summary.unpaid_count"><td><code>snapshot.summary.unpaid_count</code></td><td>未繳成員人數</td></tr>
+<tr data-field="snapshot.summary.unpaid_total"><td><code>snapshot.summary.unpaid_total</code></td><td>未繳合計（開啟隱藏金額時為空）</td></tr>
+<tr data-field="snapshot.summary.period"><td><code>snapshot.summary.period</code></td><td>統計期間名稱</td></tr>
+<tr data-field="snapshot.summary.income"><td><code>snapshot.summary.income</code></td><td>收入合計</td></tr>
+<tr data-field="snapshot.summary.dues"><td><code>snapshot.summary.dues</code></td><td>會費合計</td></tr>
+<tr data-field="snapshot.summary.event_collected"><td><code>snapshot.summary.event_collected</code></td><td>活動收款合計</td></tr>
+<tr data-field="snapshot.summary.expense"><td><code>snapshot.summary.expense</code></td><td>支出合計</td></tr>
+<tr data-field="snapshot.summary.categories"><td><code>snapshot.summary.categories</code></td><td>各類別合計清單</td></tr>
+<tr data-field="snapshot.summary.categories.kind"><td><code>snapshot.summary.categories.kind</code></td><td>收入／支出區分</td></tr>
+<tr data-field="snapshot.summary.categories.label"><td><code>snapshot.summary.categories.label</code></td><td>類別名稱</td></tr>
+<tr data-field="snapshot.summary.categories.amount"><td><code>snapshot.summary.categories.amount</code></td><td>類別合計金額</td></tr>
+<tr data-field="snapshot.events"><td><code>snapshot.events</code></td><td>活動結算摘要清單（最多 20 筆）</td></tr>
+<tr data-field="snapshot.events.title"><td><code>snapshot.events.title</code></td><td>活動名稱</td></tr>
+<tr data-field="snapshot.events.date"><td><code>snapshot.events.date</code></td><td>活動日期</td></tr>
+<tr data-field="snapshot.events.cost"><td><code>snapshot.events.cost</code></td><td>活動費用</td></tr>
+<tr data-field="snapshot.events.attendees"><td><code>snapshot.events.attendees</code></td><td>參加人數</td></tr>
+<tr data-field="snapshot.events.paid"><td><code>snapshot.events.paid</code></td><td>已繳人數</td></tr>
+<tr data-field="member_tokens"><td><code>member_tokens</code></td><td>成員個人連結清單（與副本分開傳送）</td></tr>
+<tr data-field="member_tokens.row"><td><code>member_tokens.row</code></td><td>成員列序號</td></tr>
+<tr data-field="member_tokens.token"><td><code>member_tokens.token</code></td><td>成員個人連結用的隨機值</td></tr>
+</tbody></table></div>
+<p>此外，伺服器只保存運作連結所需的值：隨機產生的社團編號與連結網址、編輯金鑰的<strong>雜湊值</strong>（不保存編輯金鑰本身）、副本的內容雜湊、建立／更新／最後確認的時間，以及交接代碼的雜湊值與到期時間。</p>
+
+<h2>3. 保存期間與刪除</h2>
+<ul>
+<li><strong>關閉連結就會立即刪除。</strong>伺服器上的副本與成員個人連結會馬上刪除，同時要求 Cloudflare 清除快取。</li>
+<li>超過總務設定的<strong>到期日</strong>就會刪除。</li>
+<li>App <strong>180 天沒有更新</strong>就會自動刪除。</li>
+<li>建立了連結卻從未成功上傳副本的社團紀錄，會在 7 天後刪除。</li>
+<li><strong>交接代碼</strong>只能在 24 小時內使用，未使用的代碼之後會刪除。已使用代碼的雜湊值最多保存 30 天，讓沒收到回應的新手機可以安全重試，之後刪除（在此之前關閉連結，會與社團一起立即刪除）。</li>
+<li>伺服器資料庫每天備份，備份檔案 7 天後刪除。因此已刪除的副本最多可能在不公開的伺服器備份中留存 7 天。</li>
+<li>刪除的資料會連同資料庫檔案的空白區域一起覆寫。</li>
+</ul>
+
+<h2>4. IP 位址與 Cloudflare</h2>
+<ul>
+<li>伺服器前端由 Cloudflare（內容傳遞與通道服務）負責。App 或成員的瀏覽器連線時，Cloudflare 會處理 IP 位址，其處理方式依照 <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 隱私權政策</a>。</li>
+<li>我們的伺服器不保存 IP 位址，也不寫入存取紀錄。為防止濫用，App 傳送到伺服器的請求（上傳、刪除、交接等）會依 IP 限制次數（每分鐘 10 次），此時 IP 位址只存在伺服器記憶體中，1 分鐘後即不再使用，並在下次整理時清除，不會寫入磁碟或紀錄。</li>
+<li>成員查看的頁面會在 Cloudflare 快取 60 秒。伺服器故障時，最後快取的畫面最多可能顯示 7 天。</li>
+<li>頁面已設定不讓搜尋引擎收錄，也不使用指令碼或 Cookie。</li>
+</ul>
+
+<h2>5. 總務的角色</h2>
+<ul>
+<li>決定是否以及為何公開成員資料的是總務。總務是個人資料處理的主體，我們則是依總務指示保存與顯示副本、性質類似受託者的服務。</li>
+<li>總務在開啟連結前，應先告知成員會用連結分享帳本並取得同意。App 開啟分享的畫面上也有相同說明。</li>
+<li>擔心姓名曝光可開啟「隱藏姓名」，擔心金額曝光可開啟「隱藏金額」。</li>
+</ul>
+
+<h2>6. 備份檔案與編輯金鑰</h2>
+<ul>
+<li>App 產生的備份檔案除了整本帳本，還包含<strong>可以修改或關閉分享連結的編輯金鑰</strong>。請不要把備份檔案交給別人，持有檔案的人可以修改或關閉連結。</li>
+<li>備份檔案只會儲存或傳送到總務選擇的資料夾或分享對象。若手機開啟 Google 備份，Android 可能會把 App 資料（包含編輯金鑰）備份到總務本人的 Google 帳戶，我們無法存取這份備份。</li>
+<li>交接檔案不含編輯金鑰，改為另外告知 24 小時有效的交接代碼。</li>
+</ul>
+
+<h2>7. 廣告</h2>
+<ul>
+<li>App 會顯示 Google AdMob 廣告。投放廣告時，Google 可能收集與處理大概位置、當機紀錄、診斷資訊、App 內互動，以及裝置識別碼（廣告 ID）。詳情請參閱 <a href="https://policies.google.com/privacy">Google 隱私權政策</a>。</li>
+<li>在歐洲經濟區（EEA）、英國與瑞士，App 會透過 Google UMP 詢問廣告同意，您隨時可在設定的<strong>廣告隱私權選項</strong>中變更。</li>
+<li>成員查看的網頁沒有廣告。</li>
+</ul>
+
+<h2>8. 付款</h2>
+<ul><li>移除廣告與訂閱的付款由 Google Play 處理。我們不會收到卡號等付款資訊，App 只會向 Google Play 確認是否已購買。</li></ul>
+
+<h2>9. 聯絡郵件</h2>
+<ul><li>點選設定中的聯絡我們會開啟手機的郵件 App。郵件只有在您自己送出時才會傳送，收到的郵件只用於回覆。</li></ul>
+
+<h2>10. 兒童</h2>
+<p>這個 App 以 18 歲以上成人為對象，不會刻意收集兒童的個人資料。</p>
+
+<h2>11. 刪除請求與聯絡方式</h2>
+<ul>
+<li>最快的方法是在 App 中<strong>關閉連結</strong>，伺服器副本會立即刪除。</li>
+<li>成員若想刪除自己的資料，可以向總務提出，或寫下連結網址寄到以下信箱。確認後我們會刪除伺服器副本。</li>
+<li>電子郵件：<a href="mailto:golmok.support@gmail.com">golmok.support@gmail.com</a></li>
+</ul>
+<p class="updated">生效日期：2026-11-01</p>
+<p class="top"><a href="#top">↑</a></p>
+</section>
+<section id="vi" lang="vi">
+<h1>Chính sách quyền riêng tư</h1>
+<p class="updated">Ngày hiệu lực: 2026-11-01</p>
+<p>Ứng dụng này giúp thủ quỹ của nhóm ghi sổ quỹ hội phí. Không cần đăng ký hay đăng nhập, sổ quỹ được lưu <strong>trong điện thoại của thủ quỹ</strong>.
+Chỉ với những nhóm mà thủ quỹ <strong>bật liên kết chia sẻ</strong>, ứng dụng mới tải một bản sao công khai lên máy chủ của chúng tôi để thành viên xem.</p>
+<p>Bên vận hành: <strong>Golmok Gongjakso (골목공작소)</strong>, hộ kinh doanh cá nhân và là nhà phát triển ứng dụng · <a href="mailto:golmok.support@gmail.com">golmok.support@gmail.com</a>. Trong chính sách này, "chúng tôi" là Golmok Gongjakso.</p>
+
+<h2>1. Dữ liệu chỉ lưu trong điện thoại</h2>
+<ul>
+<li>Nhóm, thành viên, quy tắc hội phí, lịch sử đóng tiền, sổ quỹ (thu/chi), sự kiện, ghi chú về thành viên, ảnh hóa đơn, thông tin tài khoản và cài đặt ứng dụng.</li>
+<li>Ghi chú về thành viên, ảnh hóa đơn, thông tin tài khoản, thông tin của thủ quỹ và thông tin thiết bị không bao giờ được tải lên, kể cả khi bật liên kết.</li>
+<li>Ứng dụng không xin quyền truy cập danh bạ, tin nhắn, vị trí hay thư viện ảnh. Ứng dụng chỉ có quyền Internet và các quyền hệ thống mà SDK quảng cáo và thanh toán sử dụng (ID quảng cáo, thanh toán, trạng thái mạng…). Với ảnh hóa đơn, ứng dụng chỉ nhận đúng một ảnh được chọn trong trình chọn ảnh của hệ thống.</li>
+<li>Khi gửi tệp CSV hoặc thẻ quyết toán qua ứng dụng nhắn tin hay ứng dụng khác, tệp được gửi trực tiếp từ ứng dụng mà thủ quỹ chọn và không đi qua máy chủ của chúng tôi.</li>
+</ul>
+
+<h2>2. Dữ liệu chỉ gửi lên máy chủ khi bật liên kết chia sẻ</h2>
+<p>Khi bật liên kết, ứng dụng tải lên qua kết nối mã hóa (HTTPS) một bản sao công khai chỉ gồm các mục dưới đây. Bảng này được kiểm tra tự động để khớp với các trường mà ứng dụng thực sự gửi.
+<strong>Bất kỳ ai có liên kết đều xem được nội dung này.</strong> "Ẩn số tiền" chỉ ẩn số tiền của từng thành viên; tổng sổ quỹ, số dư và chi phí sự kiện vẫn được tải lên.</p>
+<div class="tbl"><table class="fields">
+<thead><tr><th>Trường (khóa gửi đi)</th><th>Nội dung</th></tr></thead>
+<tbody>
+<tr data-field="snapshot"><td><code>snapshot</code></td><td>Toàn bộ bản sao công khai (gồm các mục bên dưới)</td></tr>
+<tr data-field="snapshot.v"><td><code>snapshot.v</code></td><td>Số phiên bản định dạng</td></tr>
+<tr data-field="snapshot.lang"><td><code>snapshot.lang</code></td><td>Ngôn ngữ của trang</td></tr>
+<tr data-field="snapshot.app_name"><td><code>snapshot.app_name</code></td><td>Tên ứng dụng (dòng cuối trang)</td></tr>
+<tr data-field="snapshot.group"><td><code>snapshot.group</code></td><td>Tên nhóm</td></tr>
+<tr data-field="snapshot.updated_at"><td><code>snapshot.updated_at</code></td><td>Thời điểm cập nhật</td></tr>
+<tr data-field="snapshot.expires_at"><td><code>snapshot.expires_at</code></td><td>Ngày hết hạn liên kết (nếu có đặt)</td></tr>
+<tr data-field="snapshot.hide_amounts"><td><code>snapshot.hide_amounts</code></td><td>Có bật ẩn số tiền hay không</td></tr>
+<tr data-field="snapshot.as_of"><td><code>snapshot.as_of</code></td><td>Nhãn thời điểm tính</td></tr>
+<tr data-field="snapshot.columns"><td><code>snapshot.columns</code></td><td>Danh sách tên các kỳ thu (tháng, khoản thu thêm)</td></tr>
+<tr data-field="snapshot.members"><td><code>snapshot.members</code></td><td>Danh sách các dòng thành viên</td></tr>
+<tr data-field="snapshot.members.name"><td><code>snapshot.members.name</code></td><td>Tên hiển thị của thành viên (đã che nếu bật ẩn tên)</td></tr>
+<tr data-field="snapshot.members.cells"><td><code>snapshot.members.cells</code></td><td>Danh sách ô theo từng kỳ</td></tr>
+<tr data-field="snapshot.members.cells.s"><td><code>snapshot.members.cells.s</code></td><td>Trạng thái ô (đã đóng, đóng một phần, chưa đóng, miễn, không áp dụng, chưa đến hạn)</td></tr>
+<tr data-field="snapshot.members.cells.a"><td><code>snapshot.members.cells.a</code></td><td>Số tiền đã đóng cho ô đó (không gửi khi bật ẩn số tiền)</td></tr>
+<tr data-field="snapshot.members.owed"><td><code>snapshot.members.owed</code></td><td>Số tiền mỗi thành viên còn chưa đóng (để trống khi bật ẩn số tiền)</td></tr>
+<tr data-field="snapshot.summary"><td><code>snapshot.summary</code></td><td>Phần tóm tắt</td></tr>
+<tr data-field="snapshot.summary.balance"><td><code>snapshot.summary.balance</code></td><td>Số dư</td></tr>
+<tr data-field="snapshot.summary.paid_rate"><td><code>snapshot.summary.paid_rate</code></td><td>Tỷ lệ đã đóng</td></tr>
+<tr data-field="snapshot.summary.unpaid_count"><td><code>snapshot.summary.unpaid_count</code></td><td>Số thành viên chưa đóng</td></tr>
+<tr data-field="snapshot.summary.unpaid_total"><td><code>snapshot.summary.unpaid_total</code></td><td>Tổng chưa đóng (để trống khi bật ẩn số tiền)</td></tr>
+<tr data-field="snapshot.summary.period"><td><code>snapshot.summary.period</code></td><td>Tên kỳ tổng hợp</td></tr>
+<tr data-field="snapshot.summary.income"><td><code>snapshot.summary.income</code></td><td>Tổng thu</td></tr>
+<tr data-field="snapshot.summary.dues"><td><code>snapshot.summary.dues</code></td><td>Tổng hội phí</td></tr>
+<tr data-field="snapshot.summary.event_collected"><td><code>snapshot.summary.event_collected</code></td><td>Tổng tiền thu cho sự kiện</td></tr>
+<tr data-field="snapshot.summary.expense"><td><code>snapshot.summary.expense</code></td><td>Tổng chi</td></tr>
+<tr data-field="snapshot.summary.categories"><td><code>snapshot.summary.categories</code></td><td>Danh sách tổng theo hạng mục</td></tr>
+<tr data-field="snapshot.summary.categories.kind"><td><code>snapshot.summary.categories.kind</code></td><td>Thu hay chi</td></tr>
+<tr data-field="snapshot.summary.categories.label"><td><code>snapshot.summary.categories.label</code></td><td>Tên hạng mục</td></tr>
+<tr data-field="snapshot.summary.categories.amount"><td><code>snapshot.summary.categories.amount</code></td><td>Tổng tiền của hạng mục</td></tr>
+<tr data-field="snapshot.events"><td><code>snapshot.events</code></td><td>Danh sách tóm tắt sự kiện (tối đa 20)</td></tr>
+<tr data-field="snapshot.events.title"><td><code>snapshot.events.title</code></td><td>Tên sự kiện</td></tr>
+<tr data-field="snapshot.events.date"><td><code>snapshot.events.date</code></td><td>Ngày sự kiện</td></tr>
+<tr data-field="snapshot.events.cost"><td><code>snapshot.events.cost</code></td><td>Chi phí sự kiện</td></tr>
+<tr data-field="snapshot.events.attendees"><td><code>snapshot.events.attendees</code></td><td>Số người tham gia</td></tr>
+<tr data-field="snapshot.events.paid"><td><code>snapshot.events.paid</code></td><td>Số người đã đóng</td></tr>
+<tr data-field="member_tokens"><td><code>member_tokens</code></td><td>Danh sách liên kết riêng của từng thành viên (gửi riêng với bản sao)</td></tr>
+<tr data-field="member_tokens.row"><td><code>member_tokens.row</code></td><td>Số thứ tự dòng thành viên</td></tr>
+<tr data-field="member_tokens.token"><td><code>member_tokens.token</code></td><td>Giá trị ngẫu nhiên cho liên kết riêng của thành viên</td></tr>
+</tbody></table></div>
+<p>Ngoài ra, máy chủ chỉ giữ những giá trị cần để vận hành liên kết: mã nhóm và địa chỉ liên kết tạo ngẫu nhiên, <strong>giá trị băm</strong> của khóa chỉnh sửa (không lưu chính khóa chỉnh sửa), giá trị băm nội dung bản sao, thời điểm tạo/cập nhật/kiểm tra gần nhất, và giá trị băm của mã bàn giao cùng thời hạn của mã.</p>
+
+<h2>3. Thời gian lưu và xóa</h2>
+<ul>
+<li><strong>Tắt liên kết là xóa ngay.</strong> Bản sao trên máy chủ và liên kết riêng của thành viên bị xóa ngay lập tức, đồng thời chúng tôi yêu cầu Cloudflare xóa bộ nhớ đệm.</li>
+<li>Dữ liệu bị xóa khi qua <strong>ngày hết hạn</strong> mà thủ quỹ đã đặt.</li>
+<li>Dữ liệu tự động bị xóa nếu ứng dụng <strong>không cập nhật trong 180 ngày</strong>.</li>
+<li>Nếu đã tạo liên kết nhưng chưa từng tải được bản sao lên, bản ghi đó bị xóa sau 7 ngày.</li>
+<li><strong>Mã bàn giao</strong> chỉ dùng được trong 24 giờ và bị xóa sau đó nếu không dùng. Giá trị băm của mã đã dùng được giữ tối đa 30 ngày để điện thoại mới có thể thử lại an toàn nếu không nhận được phản hồi, sau đó bị xóa (nếu tắt liên kết trước đó, giá trị này bị xóa ngay cùng với nhóm).</li>
+<li>Cơ sở dữ liệu máy chủ được sao lưu hằng ngày và tệp sao lưu bị xóa sau 7 ngày. Vì vậy bản sao đã xóa vẫn có thể còn trong bản sao lưu nội bộ của máy chủ tối đa 7 ngày.</li>
+<li>Dữ liệu đã xóa được ghi đè, kể cả vùng trống trong tệp cơ sở dữ liệu.</li>
+</ul>
+
+<h2>4. Địa chỉ IP và Cloudflare</h2>
+<ul>
+<li>Cloudflare (dịch vụ phân phối nội dung và đường hầm) đứng trước máy chủ của chúng tôi. Khi ứng dụng hoặc trình duyệt của thành viên kết nối, Cloudflare xử lý địa chỉ IP theo <a href="https://www.cloudflare.com/privacypolicy/">Chính sách quyền riêng tư của Cloudflare</a>.</li>
+<li>Máy chủ của chúng tôi không lưu địa chỉ IP và không ghi IP vào nhật ký truy cập. Để chống lạm dụng, các yêu cầu ứng dụng gửi đến máy chủ (tải lên, xóa, bàn giao…) bị giới hạn theo từng IP (10 lần mỗi phút). Khi đó địa chỉ IP chỉ nằm trong bộ nhớ máy chủ, sau 1 phút không còn được dùng và bị xóa ở lần dọn dẹp tiếp theo. Địa chỉ IP không bao giờ được ghi ra đĩa hay nhật ký.</li>
+<li>Trang mà thành viên xem được Cloudflare lưu đệm trong 60 giây. Nếu máy chủ gặp sự cố, trang lưu đệm gần nhất có thể vẫn hiển thị tối đa 7 ngày.</li>
+<li>Trang được đặt để không xuất hiện trên công cụ tìm kiếm và không dùng script hay cookie.</li>
+</ul>
+
+<h2>5. Vai trò của thủ quỹ</h2>
+<ul>
+<li>Thủ quỹ là người quyết định có chia sẻ thông tin thành viên hay không và vì mục đích gì. Thủ quỹ là bên kiểm soát dữ liệu, còn chúng tôi là dịch vụ mang tính chất bên xử lý, lưu và hiển thị bản sao theo yêu cầu của thủ quỹ.</li>
+<li>Trước khi bật liên kết, thủ quỹ nên báo cho thành viên biết sổ quỹ sẽ được chia sẻ qua liên kết và xin sự đồng ý. Màn hình bật chia sẻ trong ứng dụng cũng có lời nhắc này.</li>
+<li>Nếu lo về tên, hãy bật "Ẩn tên". Nếu lo về số tiền, hãy bật "Ẩn số tiền".</li>
+</ul>
+
+<h2>6. Tệp sao lưu và khóa chỉnh sửa</h2>
+<ul>
+<li>Tệp sao lưu do ứng dụng tạo chứa toàn bộ sổ quỹ cùng <strong>khóa chỉnh sửa có thể thay đổi hoặc tắt liên kết chia sẻ</strong>. Đừng đưa tệp sao lưu cho người khác. Ai có tệp này đều có thể thay đổi hoặc tắt liên kết.</li>
+<li>Tệp sao lưu chỉ được lưu hoặc gửi đến thư mục hay ứng dụng mà thủ quỹ chọn. Nếu điện thoại bật sao lưu Google, Android có thể sao lưu dữ liệu ứng dụng (gồm khóa chỉnh sửa) vào tài khoản Google của chính thủ quỹ. Chúng tôi không truy cập được bản sao lưu đó.</li>
+<li>Tệp bàn giao không chứa khóa chỉnh sửa. Thay vào đó, mã bàn giao có hiệu lực 24 giờ được báo riêng.</li>
+</ul>
+
+<h2>7. Quảng cáo</h2>
+<ul>
+<li>Ứng dụng hiển thị quảng cáo Google AdMob. Để phân phát quảng cáo, Google có thể thu thập và xử lý vị trí gần đúng, nhật ký sự cố, dữ liệu chẩn đoán, tương tác trong ứng dụng và mã nhận dạng thiết bị (ID quảng cáo). Xem <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a> để biết thêm.</li>
+<li>Ở Khu vực Kinh tế Châu Âu (EEA), Vương quốc Anh và Thụy Sĩ, ứng dụng hỏi sự đồng ý về quảng cáo qua Google UMP. Có thể thay đổi bất cứ lúc nào tại <strong>Tùy chọn quyền riêng tư quảng cáo</strong> trong Cài đặt.</li>
+<li>Trang web mà thành viên xem không có quảng cáo.</li>
+</ul>
+
+<h2>8. Thanh toán</h2>
+<ul><li>Việc thanh toán bỏ quảng cáo và gói thuê bao do Google Play xử lý. Chúng tôi không nhận số thẻ hay thông tin thanh toán nào. Ứng dụng chỉ kiểm tra với Google Play xem đã mua hay chưa.</li></ul>
+
+<h2>9. Email liên hệ</h2>
+<ul><li>Nhấn Liên hệ trong Cài đặt sẽ mở ứng dụng email trên điện thoại. Email chỉ được gửi khi tự bấm gửi, và chúng tôi chỉ dùng email nhận được để trả lời.</li></ul>
+
+<h2>10. Trẻ em</h2>
+<p>Ứng dụng dành cho người lớn từ 18 tuổi trở lên và không cố ý thu thập thông tin cá nhân của trẻ em.</p>
+
+<h2>11. Yêu cầu xóa và liên hệ</h2>
+<ul>
+<li>Cách nhanh nhất là <strong>tắt liên kết</strong> trong ứng dụng. Bản sao trên máy chủ bị xóa ngay.</li>
+<li>Nếu thành viên muốn xóa thông tin của mình, có thể nhờ thủ quỹ, hoặc gửi email cho chúng tôi kèm địa chỉ liên kết. Chúng tôi sẽ kiểm tra rồi xóa bản sao trên máy chủ.</li>
+<li>Email: <a href="mailto:golmok.support@gmail.com">golmok.support@gmail.com</a></li>
+</ul>
+<p class="updated">Ngày hiệu lực: 2026-11-01</p>
+<p class="top"><a href="#top">↑</a></p>
+</section>
+</body>
+</html>
